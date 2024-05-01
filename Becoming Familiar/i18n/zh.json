@@ -26,10 +26,10 @@
   "notifications.non-datable.5-heart": "{{villager}} 在酒馆请你喝一杯！",
   "notifications.non-datable.6-heart": "{{villager}} 和你击掌！",
   "notifications.non-datable.7-heart": "{{villager}} 和你聊起了镇上的八卦。",
-  "notifications.non-datable.8-heart": "{{villager}} 炫耀着他们最新发现的酷东西。",
+  "notifications.non-datable.8-heart": "{{villager}} 炫耀着他最新发现的酷东西。",
   "notifications.non-datable.9-heart": "{{villager}} 开了个关于做朋友的玩笑。",
-  "notifications.non-datable.10-heart": "{{villager}} 评论说他们喜欢和你在一起的感觉。",
-  "notifications.non-datable.11-heart": "{{villager}} 谈到了他们很高兴有你作为朋友。",
+  "notifications.non-datable.10-heart": "{{villager}} 评论说他喜欢和你在一起的感觉。",
+  "notifications.non-datable.11-heart": "{{villager}} 谈到了他很高兴有你作为朋友。",
   
   "notifications.random-message.0": "{{villager}} 告诉你如何在山谷集市上用陀螺作弊。",
   "notifications.random-message.1": "{{villager}} 评论了你农场南边的那棵树。",
@@ -38,13 +38,13 @@
   
   "notifications.child.0": "{{villager}} 跑过去，几乎没有注意到你。",
   "notifications.child.1": "{{villager}} 好奇地看着你。",
-  "notifications.child.2": "{{villager}} 停下来给你看他们发现的一个酷酷的虫子！",
+  "notifications.child.2": "{{villager}} 停下来给你看他发现的一个酷酷的虫子！",
   "notifications.child.3": "{{villager}} 向你挥手。",
   "notifications.child.4": "{{villager}} 对你微笑。",
   "notifications.child.5": "{{villager}} 跑过来给了你一个拥抱，然后跑开了。",
   "notifications.child.6": "{{villager}} 正要说点什么，但看到了一只虫子就跑开了。",
   "notifications.child.7": "{{villager}} 看到你很兴奋！",
-  "notifications.child.8": "{{villager}} 用他们的玩具车沿着你的腿跑来跑去。",
+  "notifications.child.8": "{{villager}} 用他的玩具车沿着你的腿跑来跑去。",
   
   // 设置菜单中的内容。友谊值支持换行，如果需要请随时告知。
   
