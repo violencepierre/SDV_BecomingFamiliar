@@ -1,0 +1,64 @@
+{
+  // In Game notifications.datable. Please feel free to tweak. When Translating, please do not translate anything between {{ }} 's.
+  "notifications.datable.0-heart": "{{villager}} jette un coup d’œil curieux dans ta direction.",
+  "notifications.datable.1-heart": "{{villager}} remarque ta présence.",
+  "notifications.datable.2-heart": "{{villager}} sourit dans ta direction.",
+  "notifications.datable.3-heart": "{{villager}} sourit en te voyant.",
+  "notifications.datable.4-heart": "{{villager}} a un large sourire en te voyant !",
+  "notifications.datable.5-heart": "{{villager}} te salue amicalement avant de continuer sa route.",
+  "notifications.datable.6-heart": "Tu entends {{villager}} dire quelque chose à propos de toi.",
+  "notifications.datable.7-heart": "{{villager}} se met à rougir.",
+  "notifications.datable.8-heart": "{{villager}} est excité(e) de te voir !",
+  "notifications.datable.9-heart": "{{villager}} te fait part de son envie de passer du temps avec toi !",
+  "notifications.datable.10-heart": "{{villager}} est ravi(e) de te voir !",
+  "notifications.datable.11-heart": "{{villager}} est très content de te voir",
+  "notifications.datable.12-heart": "{{villager}} est surexcité(e) de te voir !",
+  "notifications.datable.13-heart": "{{villager}} crie \" Je t’aime \" !",
+  "notifications.datable.14-heart": "{{villager}} est en extase de te voir",
+  "notifications.datable.15-heart": "{{villager}} t’aime, c’est visible !",
+  
+  "notifications.non-datable.0-heart": "{{villager}} jette un coup d’œil curieux dans ta direction.",
+  "notifications.non-datable.1-heart": "{{villager}} sourit dans ta direction.",
+  "notifications.non-datable.2-heart": "{{villager}} te fait un salut de la main.",
+  "notifications.non-datable.3-heart": "{{villager}} te dit « Bonjour ! » de manière enjouée.",
+  "notifications.non-datable.4-heart": "{{villager}} te demande si vous ne devriez pas passer plus de temps ensemble.",
+  "notifications.non-datable.5-heart": "{{villager}} t’offre un verre à boire au saloon !",
+  "notifications.non-datable.6-heart": "{{villager}} te fait un High Five !",
+  "notifications.non-datable.7-heart": "{{villager}} te fait part de rumeurs du village.",
+  "notifications.non-datable.8-heart": "{{villager}} te montre les dernières choses cool qu’il/elle a trouvé.",
+  "notifications.non-datable.9-heart": "{{villager}} fait une plaisanterie amicale.",
+  "notifications.non-datable.10-heart": "{{villager}} commente qu’elle apprécie ta compagnie.",
+  "notifications.non-datable.11-heart": "{{villager}} te remercie d’être son ami.",
+
+  "notifications.random-message.0": "{{villager}} t’explique comment tricher à la Grande Foire.",
+  "notifications.random-message.1": "{{villager}} s’extasie sur l’arbre au sud de ta ferme.",
+  "notifications.random-message.2": "{{villager}} te raconte une blague. Pourquoi l’Avali traverse la route ? Pour éviter l’Avali Frit de Kent !",
+  "notifications.random-message.3": "{{villager}} parle d’un poisson légendaire.",
+  
+  "notifications.child.0": "{{villager}} court sans te remarquer.",
+  "notifications.child.1": "{{villager}} te regarde avec curiosité",
+  "notifications.child.2": "{{villager}} s’arrête pour te montrer un insecte cool trouvé.",
+  "notifications.child.3": "{{villager}} te fait un signe de la main.",
+  "notifications.child.4": "{{villager}} te sourit.",
+  "notifications.child.5": "{{villager}} court et te fait un câlin, puis repart en courant.", 
+  "notifications.child.6": "{{villager}} s’apprête à te dire quelque chose, mais voit un insecte et repart.",
+  "notifications.child.7": "{{villager}} est excité(e) de te voir !",
+  "notifications.child.8": "{{villager}} amène ses jouets pour te les montrer.",
+  
+  // Stuff in the settings menu. Only how much friendship supports new lines, though if you need them please feel free to ask.
+  
+  "settings.show-notifications": "Montrer les notifications",
+  "settings.show-notifications.description": "Montrer une notification lorsque vous voyez un villageois",
+  
+  "settings.notification-duration": "Durée de la notification", 
+  "settings.notification-duration.description": "Combien de temps la notification reste affichée en millisecondes (1000 correspond à 1 seconde)",
+  
+  "settings.range": "Portée",
+  "settings.range.description": "La portée à partir de laquelle le mod détecte les villageois",
+  
+  "settings.how-much-friendship": "Montant d’amitié", 
+  "settings.how-much-friendship.description": "Combien d’amitié est obtenu avec le villageois.\n1 cœur correspond à 250 points, la baisse journalière est de -2 pour un PNJ\nclassique (pas marié, en rencard, etc.)",
+  
+  "settings.request-for-translations": "Si vous connaissez une langue ou voulez modifier une qui est déjà présente, n’hésitez pas à contribuer aux traductions du mod sur GitHub !",
+  "settings.request-for-accidental-encounters": "Si vous obtenez une notification pour un PNJ que vous ne devriez pas avoir, dîtes-le moi sur la page Nexus ou GitHub du mod !"
+}
