@@ -37,6 +37,13 @@ internal sealed class ModEntry : Mod
             getValue: () => _config.ShowNotification,
             setValue: value => _config.ShowNotification = value
         );
+        configMenu.AddBoolOption(
+            ModManifest,
+            name: () => Helper.Translation.Get("settings.show-bubbles"),
+            tooltip: () => Helper.Translation.Get("settings.show-bubbles.description"),
+            getValue: () => _config.ShowBubbles,
+            setValue: value => _config.ShowBubbles = value
+        );
         configMenu.AddNumberOption(
             ModManifest,
             name: () => Helper.Translation.Get("settings.notification-duration"),
@@ -44,7 +51,7 @@ internal sealed class ModEntry : Mod
             getValue: () => _config.NotificationDuration,
             setValue: value => _config.NotificationDuration = value
         );
-        
+
         configMenu.AddNumberOption(
             ModManifest,
             name: () => Helper.Translation.Get("settings.range"),
@@ -93,73 +100,87 @@ internal sealed class ModEntry : Mod
                     _villagers.Add(villager.Name);
                     //Add +3 to the player's friendship with the villager
                     Game1.player.changeFriendship(_config.HowMuchFriendShip, villager);
+
+                    Random rand = new Random();
+                    var friendship = Game1.player.getFriendshipLevelForNPC(villager.Name);
+                    //divide friendship by 250 and round to nearest whole number
+                    var hearts = Math.Floor(friendship / 250.0);
+
                     if (_config.ShowNotification)
                     {
-                        var friendship = Game1.player.getFriendshipLevelForNPC(villager.Name);
-                        //divide friendship by 250 and round to nearest whole number
-                        var hearts = Math.Round(friendship / 250.0);
-                        //Select on hearts, 1 - 14, and then display the appropriate message
 
+                        //Select on hearts, 1 - 14, and then display the appropriate message
                         if (villager.Name.EndsWith("WA"))
                         {
                             //SH's Wild Animals
                             return;
                         }
-                        
+
                         //Check if the NPC is datable
-                        Random rand = new Random();
                         int result = rand.Next(0, 101);
                         if (result == 100)
                         {
                             int messageNumber = rand.Next(0, 4); // (0 to 4 is actually 0 to 3)
                             //1% chance of getting a special message
                             string message = Helper.Translation.Get($"notifications.random-message.{messageNumber}");
-                            message = message.Replace("{{villager}}", villager.Name);
+                            message = message.Replace("{{villager}}", villager.displayName);
                             Game1.addHUDMessage(new HUDMessage(message, HUDMessage.achievement_type)
                             {
                                 timeLeft = _config.NotificationDuration
                             });
                             return;
                         }
+
                         if (villager.Age == NPC.adult)
                         {
                             if (villager.datable.Value == true)
                             {
                                 {
-                                    
+
                                     string message = Helper.Translation.Get($"notifications.datable.{hearts}-heart");
-                                    message = message.Replace("{{villager}}", villager.Name);
+                                    message = message.Replace("{{villager}}", villager.displayName);
                                     Game1.addHUDMessage(new HUDMessage(message, HUDMessage.achievement_type)
                                     {
                                         timeLeft = _config.NotificationDuration
                                     });
-                                    return; 
                                 }
                             }
                             else
                             {
                                 //NPC is not datable
                                 string message = Helper.Translation.Get($"notifications.non-datable.{hearts}-heart");
-                                message = message.Replace("{{villager}}", villager.Name);
+                                message = message.Replace("{{villager}}", villager.displayName);
                                 Game1.addHUDMessage(new HUDMessage(message, HUDMessage.achievement_type)
                                 {
                                     timeLeft = _config.NotificationDuration
                                 });
                             }
-                            
-                        } else if (villager.Age == NPC.child)
+
+                        }
+                        else if (villager.Age == NPC.child)
                         {
                             //Since the NPC is a child, pick a random message from the child messages
                             int randomMessage = rand.Next(0, 9); // 0 to 8, 9 is exclusive
-                            
+
                             string message = Helper.Translation.Get($"notifications.child.{randomMessage}");
-                            message = message.Replace("{{villager}}", villager.Name);
+                            message = message.Replace("{{villager}}", villager.displayName);
                             Game1.addHUDMessage(new HUDMessage(message, HUDMessage.achievement_type)
                             {
                                 timeLeft = _config.NotificationDuration
                             });
-                            return;
                         }
+                    }
+
+                    if (_config.ShowBubbles && villager.Age != NPC.child)
+                    {
+                        int messageNumber;
+
+                        messageNumber = rand.Next(hearts > 2 ? 2 : 0, (int)hearts + 1);
+
+                        string message = Helper.Translation.Get($"bubbles.{messageNumber}h.{rand.Next(1, 3)}");
+
+                        message = message.Replace("{{farmer}}", Game1.player.Name);
+                        villager.showTextAboveHead(message);
                     }
                 }
             }
@@ -168,6 +189,7 @@ internal sealed class ModEntry : Mod
     public class ModConfig
     {
         public bool ShowNotification { get; set; }
+        public bool ShowBubbles { get; set; }
         public int NotificationDuration { get; set; } = 5000;
         public int Range { get; set; } = 25;
         public int HowMuchFriendShip { get; set; } = 3;
