@@ -16,7 +16,13 @@
   "notifications.datable.13-heart": "{{villager}} yells out that they love you!",
   "notifications.datable.14-heart": "{{villager}} is ecstatic to see you!",
   "notifications.datable.15-heart": "{{villager}} loves you!",
-  
+
+  "notifications.animal.0": "{{villager}} glances curiously at you.",
+  "notifications.animal.1": "{{villager}} sees you, but decides to ignore you.",
+  "notifications.animal.2": "{{villager}} notices your presence.",
+  "notifications.animal.3": "{{villager}} is excited to see you.",
+
+
   "notifications.non-datable.0-heart": "{{villager}} glances curiously at you.",
   "notifications.non-datable.1-heart": "{{villager}} smiles at you.",
   "notifications.non-datable.2-heart": "{{villager}} waves over to you.",
