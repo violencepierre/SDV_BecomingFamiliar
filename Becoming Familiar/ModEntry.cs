@@ -110,11 +110,223 @@ internal sealed class ModEntry : Mod
                     {
 
                         //Select on hearts, 1 - 14, and then display the appropriate message
+
+                        
+///RSV + SH's animals + Downtown Zuzu temporary patch??
+                   {
+
+                        //Select on hearts, 1 - 14, and then display the appropriate message
                         if (villager.Name.EndsWith("WA"))
                         {
                             //SH's Wild Animals
+                            int randomMessage = rand.Next(0, 3); // 0 to 8, 9 is exclusive
+
+                            string message = Helper.Translation.Get($"notifications.animal.{randomMessage}");
+                            message = message.Replace("{{villager}}", "A wild animal");
+                            Game1.addHUDMessage(new HUDMessage(message, HUDMessage.achievement_type)
+                            {
+                                timeLeft = _config.NotificationDuration
+                            });
+                        }
+
+                        if (villager.Name.Contains("Tourist"))
+                        {
+                            //Tourist
+                                string message = Helper.Translation.Get($"notifications.non-datable.{hearts}-heart");
+                                message = message.Replace("{{villager}}", "A tourist");
+                                Game1.addHUDMessage(new HUDMessage(message, HUDMessage.achievement_type)
+                                {
+                                    timeLeft = _config.NotificationDuration
+                                });
+                        }
+
+                        if (villager.Name.EndsWith("DA"))
+                        {
+                            //SH's Domestic Animals
+                            int randomMessage = rand.Next(0, 3); // 0 to 8, 9 is exclusive
+
+                            string message = Helper.Translation.Get($"notifications.animal.{randomMessage}");
+                            message = message.Replace("{{villager}}", "An animal");
+                            Game1.addHUDMessage(new HUDMessage(message, HUDMessage.achievement_type)
+                            {
+                                timeLeft = _config.NotificationDuration
+                            });
+                        }
+
+
+                        if (villager.Name.StartsWith("Child"))
+                        {
+                            int randomMessage = rand.Next(0, 9); // 0 to 8, 9 is exclusive
+
+                            string message = Helper.Translation.Get($"notifications.child.{randomMessage}");
+                            message = message.Replace("{{villager}}", villager.displayName);
+                            Game1.addHUDMessage(new HUDMessage(message, HUDMessage.achievement_type)
+                            {
+                                timeLeft = _config.NotificationDuration
+                            });
+
+
+                        }
+
+                        if (villager.Name.StartsWith("Joja"))
+                        {
                             return;
                         }
+
+                        if (villager.Name.StartsWith("Man"))
+                        {
+                                string message = Helper.Translation.Get($"notifications.non-datable.{hearts}-heart");
+                                message = message.Replace("{{villager}}", "A man");
+                                Game1.addHUDMessage(new HUDMessage(message, HUDMessage.achievement_type)
+                                {
+                                    timeLeft = _config.NotificationDuration
+                                });
+                        }
+
+                        if (villager.Name.StartsWith("Pigeon"))
+                        {
+                            int randomMessage = rand.Next(0, 3); // 0 to 8, 9 is exclusive
+
+                            string message = Helper.Translation.Get($"notifications.animal.{randomMessage}");
+                            message = message.Replace("{{villager}}", "An animal");
+                            Game1.addHUDMessage(new HUDMessage(message, HUDMessage.achievement_type)
+                            {
+                                timeLeft = _config.NotificationDuration
+                            });
+                        }
+
+                        if (villager.Name.StartsWith("Woman"))
+                        {
+                                string message = Helper.Translation.Get($"notifications.non-datable.{hearts}-heart");
+                                message = message.Replace("{{villager}}", "A woman");
+                                Game1.addHUDMessage(new HUDMessage(message, HUDMessage.achievement_type)
+                                {
+                                    timeLeft = _config.NotificationDuration
+                                });
+                        }
+
+                        if (villager.Name.StartsWith("BrownChicken"))
+                        {
+                            int randomMessage = rand.Next(0, 3); // 0 to 8, 9 is exclusive
+
+                            string message = Helper.Translation.Get($"notifications.animal.{randomMessage}");
+                            message = message.Replace("{{villager}}", "An animal");
+                            Game1.addHUDMessage(new HUDMessage(message, HUDMessage.achievement_type)
+                            {
+                                timeLeft = _config.NotificationDuration
+                            });
+                        }
+
+                        if (villager.Name.StartsWith("FarmKiwi"))
+                        {
+                            int randomMessage = rand.Next(0, 3); // 0 to 8, 9 is exclusive
+
+                            string message = Helper.Translation.Get($"notifications.animal.{randomMessage}");
+                            message = message.Replace("{{villager}}", "An animal");
+                            Game1.addHUDMessage(new HUDMessage(message, HUDMessage.achievement_type)
+                            {
+                                timeLeft = _config.NotificationDuration
+                            });
+                        }
+
+                        if (villager.Name.StartsWith("BrownCow"))
+                        {
+                            int randomMessage = rand.Next(0, 3); // 0 to 8, 9 is exclusive
+
+                            string message = Helper.Translation.Get($"notifications.animal.{randomMessage}");
+                            message = message.Replace("{{villager}}", "An animal");
+                            Game1.addHUDMessage(new HUDMessage(message, HUDMessage.achievement_type)
+                            {
+                                timeLeft = _config.NotificationDuration
+                            });
+                        }
+
+                        if (villager.Name.StartsWith("Guest"))
+                        {
+                                string message = Helper.Translation.Get($"notifications.non-datable.{hearts}-heart");
+                                message = message.Replace("{{villager}}", "Guest");
+                                Game1.addHUDMessage(new HUDMessage(message, HUDMessage.achievement_type)
+                                {
+                                    timeLeft = _config.NotificationDuration
+                                });
+                        }
+
+                        if (villager.Name.StartsWith("Howdy"))
+                        {
+                            int randomMessage = rand.Next(0, 3); // 0 to 8, 9 is exclusive
+
+                            string message = Helper.Translation.Get($"notifications.animal.{randomMessage}");
+                            message = message.Replace("{{villager}}", "An animal");
+                            Game1.addHUDMessage(new HUDMessage(message, HUDMessage.achievement_type)
+                            {
+                                timeLeft = _config.NotificationDuration
+                            });
+                        }
+
+                        if (villager.Name.StartsWith("MistFox"))
+                        {
+                            int randomMessage = rand.Next(0, 3); // 0 to 8, 9 is exclusive
+
+                            string message = Helper.Translation.Get($"notifications.animal.{randomMessage}");
+                            message = message.Replace("{{villager}}", "An animal");
+                            Game1.addHUDMessage(new HUDMessage(message, HUDMessage.achievement_type)
+                            {
+                                timeLeft = _config.NotificationDuration
+                            });
+                        }
+
+                        if (villager.Name.StartsWith("RingSpirit"))
+                        {
+                            return;
+                        }
+
+                        if (villager.Name.StartsWith("Spirit"))
+                        {
+                            return;
+                        }
+
+                        if (villager.Name.StartsWith("WanderingChicken"))
+                        {
+                            int randomMessage = rand.Next(0, 3); // 0 to 8, 9 is exclusive
+
+                            string message = Helper.Translation.Get($"notifications.animal.{randomMessage}");
+                            message = message.Replace("{{villager}}", "An animal");
+                            Game1.addHUDMessage(new HUDMessage(message, HUDMessage.achievement_type)
+                            {
+                                timeLeft = _config.NotificationDuration
+                            });
+                        }
+
+                        if (villager.Name.StartsWith("WhiteChicken"))
+                        {
+                            int randomMessage = rand.Next(0, 3); // 0 to 8, 9 is exclusive
+
+                            string message = Helper.Translation.Get($"notifications.animal.{randomMessage}");
+                            message = message.Replace("{{villager}}", "An animal");
+                            Game1.addHUDMessage(new HUDMessage(message, HUDMessage.achievement_type)
+                            {
+                                timeLeft = _config.NotificationDuration
+                            });
+                        }
+
+                        if (villager.Name.StartsWith("WhiteCow"))
+                        {
+                            int randomMessage = rand.Next(0, 3); // 0 to 8, 9 is exclusive
+
+                            string message = Helper.Translation.Get($"notifications.animal.{randomMessage}");
+                            message = message.Replace("{{villager}}", "An animal");
+                            Game1.addHUDMessage(new HUDMessage(message, HUDMessage.achievement_type)
+                            {
+                                timeLeft = _config.NotificationDuration
+                            });
+                        }
+                        
+///RSV + SH's animals + Downtown Zuzu temporary patch??
+
+
+
+
+
 
                         //Check if the NPC is datable
                         int result = rand.Next(0, 101);
